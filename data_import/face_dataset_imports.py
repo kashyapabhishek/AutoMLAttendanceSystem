@@ -30,7 +30,7 @@ class FaceDatasetImports:
         """
         Import data from kaggle and save it to Data folder
         :param url: string
-            url of the kaggle datasets
+            url of the kaggle images
         :return: None
         """
         try:
@@ -49,12 +49,13 @@ class FaceDatasetImports:
             current_dir_path = os.path.join(os.getcwd(), 'logging_module', file_name)
             shutil.copytree(current_dir_path, self.data_dir)
             self.file_object.info(f"file moved from {current_dir_path} to {self.data_dir}")
+            shutil.rmtree(current_dir_path)
         except Exception as ex:
             self.file_object.error(f'In FaceDatasetImports class => move_data_to_url', ex)
 
     def download(self):
         """
-        pipeline to download the datasets
+        pipeline to download the images
         :return: None
         """
         try:
