@@ -17,3 +17,5 @@ test_file.close()
 copy_file_dir = os.path.join(os.getcwd(), 'training/darknet/training')
 shutil.move(os.path.join(os.getcwd(), 'train.txt'), copy_file_dir)
 shutil.move(os.path.join(os.getcwd(), 'test.txt'), copy_file_dir)
+
+#wget https://pjreddie.com/media/files/darknet53.conv.74
